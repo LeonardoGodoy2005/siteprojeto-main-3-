@@ -51,6 +51,33 @@
                 </div>
             </form>
         </div>
+
+
+        <script>
+            // Usando o fetch para fazer uma requisição GET à API
+            fetch('http://localhost:5500/usuarios')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro na requisição');
+                    }
+                    return response.json(); // Convertendo a resposta para JSON
+                })
+                .then(data => {
+                    console.log(data); // Exibe os dados no console para debug
+
+                    // Atualiza a página com os dados recebidos
+                    const resultadoDiv = document.getElementById('resultado');
+                    resultadoDiv.innerHTML = `<p>Nome: ${data.nome}</p><p>Idade: ${data.idade}</p>`;
+                })
+                .catch(error => {
+                    console.error('Erro:', error); // Caso haja algum erro na requisição
+                });
+        </script>
+
+
+
+
+
         <script src="registrar.js"></script>
 
 </body>
