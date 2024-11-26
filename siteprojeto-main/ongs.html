@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doe para ONGs | Plataforma de Doações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg" id="teste">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Seja um Voluntario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ongs.html">Ongs</a>
+                    </li>
+
+                    <!-- Imagem no canto direito -->
+                    <a href="perfil.html" id="link-editar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Editar Card" class="img-editar">
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero (Introdução) -->
+    <section class="hero text-center my-5">
+        <div class="container">
+            <h1 class="display-4">Doe para ONGs e faça a diferença!</h1>
+            <p class="lead">Apoie projetos que transformam vidas e contribua para um mundo mais justo.</p>
+            <a href="ongs.html" class="btn btn-primary btn-lg">Conheça as ONGs</a>
+        </div>
+    </section>
+
+    <img src="logo.png" alt="logo" class="logo1">
+
+    <!-- Cards das ONGs -->
+    <section class="container mb-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card card-ong">
+                    <img src="casacure.png" class="card-img-top img-ong" alt="Casa CURE">
+                    <div class="card-body">
+                        <h5 class="card-title">Casa CURE</h5>
+                        <p class="card-text">O CURE é um projeto que nasceu na instituição religiosa Vivo Por Ti - Igreja Em Movimento. Este projeto surgiu no ano de 2018 em resposta às demandas encontradas na comunidade de Samambaia -DF.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="ong1.html" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card card-ong">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top img-ong" alt="Farol na Quebrada">
+                    <div class="card-body">
+                        <h5 class="card-title">Farol na Quebrada</h5>
+                        <p class="card-text">A ONG Farol da Quebrada, localizada em Brasília, tem como missão promover a inclusão social e o desenvolvimento sustentável em comunidades vulneráveis.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="ong2.html" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card card-ong">
+                    <img src="tocaseguralogo.png" class="card-img-top img-ong" alt="Ong 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Na toca segura</h5>
+                        <p class="card-text">Somos o Toca Segura, uma organização dedicada a resgatar animais em risco, proporcionando acolhimento, castração e tratamento para prepará-los para adoção. Como nosso espaço está superlotado, também apoiamos protetores independentes,
+                            divulgando e ajudando na busca por lares definitivos para os animais resgatados.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://tocasegura.ong.br/como-ajudar/" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card card-ong">
+                    <img src="ongnarua.png" class="card-img-top img-ong" alt="Ong 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Ong da Rua</h5>
+                        <p class="card-text">A ONG da Rua em Brasília apoia pessoas em situação de rua, oferecendo acolhimento, alimentação, cuidados de saúde e orientação para reintegração social, com o objetivo de promover dignidade e ajudar na reconstrução de suas vidas.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://www.ongdarua.com.br/noisvoce" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card card-ong">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSODqENaJ5Pg1Ycqy0PZx63gt0XltXqLKAQ6A&s" class="card-img-top img-ong" alt="Ong 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Ame - Ação de mulheres pela equidade</h5>
+                        <p class="card-text">A AME foi idealizada por Damiana Neto em 2010, com o objetivo de reduzir iniquidades de gênero. Após experiências em Moçambique e Londres, a AME foi fundada em 2016, em Brasília (DF), para enfrentar o racismo e as violências de
+                            gênero, promover os Direitos Humanos, defender a saúde e fortalecer o SUS, além de preservar o meio ambiente e os povos tradicionais. A organização visa reduzir as desigualdades raciais e de gênero nas políticas públicas, com
+                            foco na Educação Antirracista desde a infância.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://www.ameequidade.org/apoie-nossa-causa/" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Rodapé -->
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Soli Ongs. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-VO1Fg1R9I7cnqhm75dcnwQTxrdVX5AtQGc1Ctd6v8uzyE6d4KTtdP7Vf36s57W1N" crossorigin="anonymous"></script>

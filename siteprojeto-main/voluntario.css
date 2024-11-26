@@ -1,0 +1,128 @@
+/* Estilo geral da página */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* Botão de Voltar */
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #003366;
+    /* darkblue */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #002244;
+    /* darkblue mais escuro */
+}
+
+
+/* Estilo do card */
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    /* Ajusta o tamanho máximo do card */
+    margin: auto;
+    /* Garante que o card fique centralizado */
+}
+
+
+/* Título */
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Estilo do formulário */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Ajuste para o alinhamento dos campos */
+
+input,
+textarea,
+select {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    /* Garante que todos os campos ocupem 100% da largura do card */
+    box-sizing: border-box;
+    /* Garante que o padding não ultrapasse os limites */
+}
+
+
+/* Adicionando contorno nos campos ao focar */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #003366;
+    /* Darkblue no foco */
+    box-shadow: 0 0 8px rgba(0, 51, 102, 0.5);
+    /* Efeito de contorno */
+}
+
+
+/* Ajustes para o botão */
+
+button {
+    background-color: #003366;
+    /* darkblue */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #002244;
+    /* darkblue mais escuro */
+}
+
+button:disabled {
+    background-color: #cccccc;
+}

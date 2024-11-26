@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doe para Casa CURE - Soli Ongs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="ongs.css">
+</head>
+
+<body>
+
+    <!-- Botão Voltar -->
+    <div class="container mt-4">
+        <a href="ongs.html" class="btn btn-secondary">Voltar</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+
+        <div class="donation-section">
+
+            <!-- Imagem destacada da ONG -->
+            <div class="donation-image">
+                <!-- Substitua pelo link da imagem real da ONG -->
+                <img src="casacure.png" alt="Casa CURE" class="img-fluid rounded mb-4">
+            </div>
+
+            <h1 class="donation-title">Doe para Casa CURE</h1>
+
+            <p class="donation-text">Sua contribuição pode fazer toda a diferença na vida de muitas famílias. O CURE oferece cursos, alimentação, e apoio psicossocial para aqueles que mais precisam na comunidade de Samambaia. Ajude-nos a continuar esse trabalho com sua doação!</p>
+
+            <div class="donation-form">
+                <label for="donation-amount">Valor da Doação (R$):</label>
+                <input type="number" id="donation-amount" placeholder="Digite o valor da sua doação" min="1">
+
+                <div class="amount-info">
+                    <p><strong>Dica:</strong> Qualquer valor é bem-vindo! Sua ajuda é fundamental para a continuidade do projeto.</p>
+                </div>
+
+                <button type="button" onclick="confirmDonation()">Contribuir</button>
+            </div>
+
+            <p class="thank-you" id="thank-you-message" style="display: none;">Obrigado pela sua contribuição! Você fez a diferença!</p>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple text-white text-center py-3">
+        <p>&copy; 2024 Soli Ongs. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function confirmDonation() {
+            const amount = document.getElementById('donation-amount').value;
+            const thankYouMessage = document.getElementById('thank-you-message');
+
+            if (amount > 0) {
+                thankYouMessage.style.display = 'block';
+            } else {
+                alert('Por favor, insira um valor válido para a doação.');
+            }
+        }
+    </script>
+</body>
+
+</html>

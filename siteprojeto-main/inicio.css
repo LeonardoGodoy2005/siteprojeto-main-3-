@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    /* Cor de fundo para o corpo da página */
+}
+
+.navbar {
+    background-color: darkblue;
+    /* Fundo verde claro semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    padding: 10px 20px;
+    /* Preenchimento da navbar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+    /* Espaço entre os itens da navbar */
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+    position: relative;
+    /* Necessário para o pseudo-elemento */
+    color: rgb(255, 255, 255);
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    padding: 5px 10px;
+    /* Espaçamento interno */
+    transition: color 0.3s;
+    /* Transição suave para a cor do texto */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+    color: rgb(0, 0, 0);
+    /* Cor do texto ao passar o mouse */
+}
+
+.navbar-nav .nav-link::after,
+.navbar-brand::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Distância da borda inferior */
+    width: 100%;
+    height: 2px;
+    /* Espessura da borda */
+    background-color: transparent;
+    /* Cor inicial da borda */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transições suaves */
+    transform: scaleX(0);
+    /* Começa invisível */
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-brand:hover::after {
+    background-color: rgb(0, 0, 0);
+    /* Cor da borda ao passar o mouse */
+    transform: scaleX(1);
+    /* Aparece a borda */
+}
+
+header {
+    text-align: center;
+    /* Centraliza o texto no cabeçalho */
+    margin-top: 20px;
+    /* Margem superior para o cabeçalho */
+}
+
+header h1 {
+    margin-bottom: 20px;
+    /* Espaço abaixo do título */
+}
+
+header p {
+    margin-top: 10px;
+    /* Espaço acima do parágrafo */
+}
+
+.container-fluid {
+    padding: 20px;
+    /* Preenchimento interno */
+    background-color: darkblue;
+    /* Fundo azul */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+}
+
+#teste {
+    background-color: darkblue !important;
+    /* Azul para o teste */
+}
+
+.card {
+    margin-left: 50px;
+    margin-right: 30px;
+    width: 300px;
+    /* Largura do card */
+    height: 200px;
+    /* Altura do card */
+    border: 2px solid #000;
+    /* Espessura, estilo e cor da borda */
+    border-radius: 10px;
+    /* Para bordas arredondadas */
+    padding: 20px;
+    /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidade */
+    background-color: #fff;
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+    width: 400px;
+}
+
+body {
+    background-image: url("");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#btn-test {
+    background-color: darkblue !important;
+    border-color: darkblue !important;
+}
+
+#btn-test:hover {
+    background-color: darkblue !important;
+    border-color: darkblue !important;
+}
+
+#btn-test2 {
+    background-color: blueviolet !important;
+    border-color: blueviolet !important;
+}
+
+#btn-test2:hover {
+    background-color: rgb(192, 101, 253) !important;
+    border-color: rgb(192, 101, 253) !important;
+}
+
+#o-que-sao {
+    color: rgb(0, 0, 0);
+}
+
+#importancia {
+    color: rgb(0, 0, 0);
+}
+
+#como-funcionam {
+    color: rgb(0, 0, 0);
+}
+
+#exemplos {
+    color: rgb(0, 0, 0);
+}
+
+#c {
+    color: rgb(255, 255, 255);
+    height: 125px;
+    margin-top: 120px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.mt-3 {
+    position: relative;
+    top: -15px;
+}
+
+
+/* Estilo global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Corpo da página */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: darkblue;
+    /* Roxo claro, como na navegação */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque no fundo */
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/* Seção Hero - Introdução */
+
+.hero {
+    background-color: darkblue;
+    /* Roxo mais forte */
+    padding: 60px 0;
+    /* Aumentei um pouco a altura */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    /* Centralizando o conteúdo */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    filter: blur(15px);
+    /* Aumentei o desfoque para mais profundidade */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    /* Tamanho do título */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+
+/* Botões "Saiba Mais" */
+
+.btn-primary {
+    background-color: darkblue;
+    /* Cor roxa consistente com a navbar */
+    border-color: darkblue;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
+    /* Roxo mais escuro no hover */
+    border-color: darkblue;
+    transform: translateY(-5px);
+    /* Efeito de elevação no hover */
+}
+
+
+/* Cards das ONGs */
+
+.card-ong {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.card-ong:hover {
+    transform: translateY(-10px);
+}
+
+.img-ong {
+    border-radius: 15px;
+    border: 5px solid #ddd;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 200px;
+    object-fit: cover;
+}
+
+.img-ong:hover {
+    transform: scale(1.05);
+    border-color: darkblue;
+    /* Roxo para a borda da imagem */
+}
+
+
+/* Título do Card */
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Texto do Card */
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.card-text:hover {
+    color: darkblue;
+    /* Roxo no texto */
+}
+
+
+/* Footer */
+
+footer {
+    background-color: darkblue;
+    /* Cor de fundo roxo para o rodapé */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* Cards - Estilos gerais */
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.card-footer .btn-primary {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Espaçamento entre os cards */
+
+.row {
+    margin-top: 30px;
+}
+
+
+/* Responsividade - Ajustes para dispositivos móveis */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 0;
+        /* Menor altura em dispositivos móveis */
+    }
+    .card-ong {
+        margin-bottom: 30px;
+    }
+    .img-ong {
+        height: 180px;
+        /* Menor altura para dispositivos móveis */
+    }
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* Posicionando a imagem no canto direito */
+
+.img-editar {
+    position: fixed;
+    bottom: 20px;
+    /* Distância da parte inferior */
+    right: 20px;
+    /* Distância da parte direita */
+    width: 50px;
+    /* Tamanho da imagem */
+    height: 50px;
+    cursor: pointer;
+    /* Cursor de pointer para indicar interatividade */
+    border-radius: 50%;
+    /* Para a imagem ficar redonda (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+}
+
+#link-editar {
+    display: block;
+}
+
+.logo1 {
+    display: flex;
+    margin-left: 42%;
+}
+
+#ini {
+    text-align: center;
+}
+
+
+/* Container do formulário em estilo de card */
+
+.form-container {
+    width: 320px;
+    /* Largura reduzida do card */
+    margin: 50px auto;
+    /* Centraliza o card */
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #ccc;
+    /* Contorno do card */
+    border-radius: 12px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para dar profundidade */
+}
+
+
+/* Título do card */
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: darkblue;
+}
+
+
+/* Estilo para os campos de entrada e select */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    /* Borda leve */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    /* Transição para foco */
+}
+
+
+/* Foco nos campos de entrada, select e textarea */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: darkblue;
+    /* Cor do contorno ao focar */
+    outline: none;
+    /* Remove a borda padrão de foco */
+}
+
+
+/* Botão de enviar */
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+}
+
+
+/* Hover do botão */
+
+button:hover {
+    background-color: #003366;
+    /* Cor mais escura no hover */
+}
+
+
+/* Estilo do botão de voltar */
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #003366;
+    /* Cor mais escura no hover */
+}
+
+
+/* Estilo para o campo de endereço */
+
+textarea {
+    width: 100%;
+    height: auto;
+    /* Ajusta a altura para o conteúdo */
+    min-height: 100px;
+    /* Mínima altura para o campo de endereço */
+}

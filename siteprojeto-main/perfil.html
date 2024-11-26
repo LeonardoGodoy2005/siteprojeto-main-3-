@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Card</title>
+    <link rel="stylesheet" href="card.css">
+    <!-- Estilos gerais -->
+</head>
+
+<body>
+
+    <body>
+        <div class="body">
+            <div class="cartao">
+                <!-- Imagem de fundo e conteúdo do cartão -->
+                <div class="foto-container">
+                    <img class="foto" src="https://via.placeholder.com/100" alt="Foto de Perfil" id="fotoPerfil" onclick="editarFoto()">
+                    <div class="tooltip" id="tooltip">Clique para alterar a imagem de perfil</div>
+                </div>
+
+                <!-- Informações pessoais -->
+                <h2 class="texto1" id="nome">Nome do Usuário</h2>
+                <p class="texto2" id="sexo">Sexo: Masculino</p>
+                <p class="texto2" id="genero">Gênero: Masculino</p>
+                <p class="texto2" id="profissao">Profissão: Desenvolvedor</p>
+
+                <!-- Formulário de edição -->
+                <div class="form-edicao" id="formEdicao">
+                    <input type="text" id="novoNome" placeholder="Novo Nome" value="Nome do Usuário">
+                    <select id="novoSexo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                    <input type="text" id="novoGenero" placeholder="Novo Gênero" value="Masculino">
+                    <input type="text" id="novaProfissao" placeholder="Nova Profissão" value="Desenvolvedor">
+                    <button class="botao-editar" onclick="salvarEdicao()">Salvar Alterações</button>
+                </div>
+
+                <!-- Botão para abrir o formulário de edição -->
+                <button class="botao-editar" onclick="mostrarFormulario()">Editar Informações</button>
+
+                <!-- Botão de Logout -->
+                <button class="botao-editar" onclick="logout()">Logout</button>
+
+                <!-- Campo de upload de foto -->
+                <input type="file" id="uploadFoto" style="display:none" accept="image/*" onchange="atualizarFoto()">
+            </div>
+        </div>
+
+        <button class="botao-voltar" onclick="window.history.back()">Voltar</button>
+
+
+        <!-- Card Fale Conosco -->
+        <div class="card-fale-conosco">
+            <h3>Fale Conosco</h3>
+            <p class="texto-explicativo">Aqui você pode mandar o que achou, feedback, bugs, ou algo que queria falar!</p>
+            <form id="formFeedback">
+                <textarea id="feedbackText" placeholder="Escreva sua mensagem..." required></textarea>
+                <button type="button" class="botao-editar" onclick="enviarWhatsApp()">Enviar</button>
+            </form>
+        </div>
+    </body>
+
+
+    <script src="perfil.js"></script>
+    <!-- Adicionando o script externo -->
+</body>
+
+</html>
