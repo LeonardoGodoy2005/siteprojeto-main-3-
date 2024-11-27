@@ -149,3 +149,10 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* logo no meio */
+
+#image {
+    display: flex;
+    margin-left: 40%;
+}
