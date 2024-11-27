@@ -43,7 +43,7 @@
                 </div>
 
                 <!-- Botão de Envio -->
-                <button type="submit" class="btn btn-primary">Criar Conta</button>
+                <button type="button" onclick="enviarDados()" class="btn btn-primary">Criar Conta</button>
 
                 <!-- Link para Login abaixo -->
                 <div class="login-link">
@@ -51,6 +51,51 @@
                 </div>
             </form>
         </div>
+
+
+        <script>
+            // Função para enviar os dados para a API
+            function enviarDados() {
+                const nome = document.getElementById('registerName').value
+                const senha = document.getElementById('registerPassword').value
+                const email = document.getElementById('registerEmail').value
+
+                const dadosParaEnviar = {
+                    nome,
+                    senha,
+                    email
+                }
+
+
+
+                fetch('http://localhost:3000/usuarios', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(dadosParaEnviar) // Convertendo o objeto para JSON
+                    })
+                    .then(response => {
+                        if (!response.ok) { // Verifica se a resposta foi bem-sucedida
+                            return response.json().then(errorData => {
+                                throw new Error(`Erro ${response.status}: ${errorData.message || 'Erro desconhecido'}`);
+                            });
+                        }
+                        return response.json(); // Converte a resposta para JSON
+                    })
+                    .then(data => {
+                        console.log('Resposta da API:', data); // Exibe a resposta da API
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error); // Exibe o erro no console
+                    });
+            }
+        </script>
+
+
+
+
+
         <script src="registrar.js"></script>
 
 </body>
