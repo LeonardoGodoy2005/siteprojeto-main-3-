@@ -549,3 +549,15 @@ textarea {
     /* Mínima altura para o campo de endereço */
 }
 
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #d9534f;
+    /* Cor vermelha para mensagens de erro */
+    text-align: center;
+}
+
+.message.success {
+    color: #5bc0de;
+    /* Cor azul para mensagens de sucesso */
+}

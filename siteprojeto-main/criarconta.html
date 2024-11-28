@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,50 +46,103 @@
                 <!-- Botão de Envio -->
                 <button type="button" onclick="enviarDados()" class="btn btn-primary">Criar Conta</button>
 
+
                 <!-- Link para Login abaixo -->
                 <div class="login-link">
                     <p>Já tem uma conta? <a href="login.html">Fazer login</a></p>
+
+
                 </div>
+
+
+                <div id="message" class="message"></div>
+
+
             </form>
         </div>
 
 
         <script>
-            // Função para enviar os dados para a API
-            function enviarDados() {
-                const nome = document.getElementById('registerName').value
-                const senha = document.getElementById('registerPassword').value
-                const email = document.getElementById('registerEmail').value
+            async function enviarDados() {
+                const nome = document.getElementById('registerName').value;
+                const senha = document.getElementById('registerPassword').value;
+                const email = document.getElementById('registerEmail').value;
+
+                // Limpa a mensagem anterior
+                const messageElement = document.getElementById('message');
+                messageElement.textContent = ''; // Limpa a mensagem anterior
+                messageElement.classList.remove('success', 'error'); // Remove as classes de estilo de erro ou sucesso
+
+                // Validação básica de campos
+                if (!nome || !senha || !email) {
+                    messageElement.textContent = "Por favor, preencha todos os campos.";
+                    messageElement.classList.add('error');
+                    return;
+                }
+
+                // Validação de e-mail
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailRegex.test(email)) {
+                    messageElement.textContent = "Por favor, insira um e-mail válido.";
+                    messageElement.classList.add('error');
+                    return;
+                }
 
                 const dadosParaEnviar = {
                     nome,
                     senha,
                     email
-                }
+                };
 
-
-
-                fetch('http://localhost:3000/usuarios', {
+                try {
+                    const response = await fetch('http://localhost:3000/usuarios', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(dadosParaEnviar) // Convertendo o objeto para JSON
-                    })
-                    .then(response => {
-                        if (!response.ok) { // Verifica se a resposta foi bem-sucedida
-                            return response.json().then(errorData => {
-                                throw new Error(`Erro ${response.status}: ${errorData.message || 'Erro desconhecido'}`);
-                            });
-                        }
-                        return response.json(); // Converte a resposta para JSON
-                    })
-                    .then(data => {
-                        console.log('Resposta da API:', data); // Exibe a resposta da API
-                    })
-                    .catch(error => {
-                        console.error('Erro:', error); // Exibe o erro no console
                     });
+
+                    const data = await response.json(); // Converte a resposta para JSON
+
+                    console.log(data); // Log da resposta da API
+
+                    // Verifica a resposta da API para nome de usuário ou e-mail já cadastrado
+                    if (response.ok) {
+                        if (data.message === 'Usuario criado com sucesso!') {
+                            messageElement.textContent = "Cadastro realizado com sucesso!";
+                            messageElement.classList.add('success');
+
+                            // Limpa os campos de entrada após o cadastro
+                            document.getElementById('registerName').value = '';
+                            document.getElementById('registerPassword').value = '';
+                            document.getElementById('registerEmail').value = '';
+
+                            // Exibe a mensagem por 3 segundos antes de redirecionar
+                            setTimeout(() => {
+                                window.location.href = 'login.html'; // Redireciona para a página de login
+                            }, 2000); // 2 segundos
+                        } else {
+                            throw new Error(data.message || "Erro desconhecido no cadastro.");
+                        }
+                    } else {
+                        // Caso a resposta não seja ok, verifica o tipo de erro retornado pela API
+                        if (data.message === 'Nome já cadastrado') {
+                            messageElement.textContent = "O nome informado já está em uso. Por favor, escolha outro nome.";
+                            messageElement.classList.add('error');
+                        } else if (data.message === 'E-mail já cadastrado') {
+                            messageElement.textContent = "O e-mail informado já está cadastrado. Por favor, use outro.";
+                            messageElement.classList.add('error');
+                        } else {
+                            messageElement.textContent = "Erro desconhecido: " + (data.message || "Tente novamente mais tarde.");
+                            messageElement.classList.add('error');
+                        }
+                    }
+                } catch (error) {
+                    console.error('Erro:', error); // Exibe o erro no console
+                    messageElement.textContent = "Ocorreu um erro ao tentar cadastrar. Tente novamente mais tarde.";
+                    messageElement.classList.add('error');
+                }
             }
         </script>
 
@@ -96,7 +150,7 @@
 
 
 
-        <script src="registrar.js"></script>
+
 
 </body>
 
