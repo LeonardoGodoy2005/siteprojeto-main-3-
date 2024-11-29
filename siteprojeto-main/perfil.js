@@ -7,7 +7,7 @@ function salvarEdicao() {
     // Atualiza as informações no cartão
     document.getElementById("nome").innerText = document.getElementById("novoNome").value;
     document.getElementById("sexo").innerText = "Sexo: " + document.getElementById("novoSexo").value;
-    document.getElementById("genero").innerText = "Gênero: " + document.getElementById("novoGenero").value;
+    document.getElementById("genero").innerText = "Idade: " + document.getElementById("novaIdade").value;
     document.getElementById("profissao").innerText = "Profissão: " + document.getElementById("novaProfissao").value;
 
     // Esconde o formulário após salvar
@@ -32,6 +32,7 @@ function atualizarFoto() {
         leitor.readAsDataURL(arquivo);
     }
 }
+
 // Função para logout
 function logout() {
     // Aqui você pode adicionar o código para deslogar o usuário
