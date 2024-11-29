@@ -57,6 +57,10 @@
 
                 <div id="message" class="message"></div>
 
+                <div id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+
 
             </form>
         </div>
@@ -73,10 +77,15 @@
                 messageElement.textContent = ''; // Limpa a mensagem anterior
                 messageElement.classList.remove('success', 'error'); // Remove as classes de estilo de erro ou sucesso
 
+                // Exibe o spinner de carregamento
+                const loadingElement = document.getElementById('loading');
+                loadingElement.style.display = 'block'; // Mostra o spinner
+
                 // Validação básica de campos
                 if (!nome || !senha || !email) {
                     messageElement.textContent = "Por favor, preencha todos os campos.";
                     messageElement.classList.add('error');
+                    loadingElement.style.display = 'none'; // Esconde o spinner
                     return;
                 }
 
@@ -85,6 +94,7 @@
                 if (!emailRegex.test(email)) {
                     messageElement.textContent = "Por favor, insira um e-mail válido.";
                     messageElement.classList.add('error');
+                    loadingElement.style.display = 'none'; // Esconde o spinner
                     return;
                 }
 
@@ -142,6 +152,11 @@
                     console.error('Erro:', error); // Exibe o erro no console
                     messageElement.textContent = "Ocorreu um erro ao tentar cadastrar. Tente novamente mais tarde.";
                     messageElement.classList.add('error');
+                } finally {
+                    // Adiciona um atraso para esconder o spinner
+                    setTimeout(() => {
+                        loadingElement.style.display = 'none'; // Esconde o spinner após um pequeno atraso
+                    }, 1000); // O spinner ficará visível por 1 segundo após a conclusão
                 }
             }
         </script>
