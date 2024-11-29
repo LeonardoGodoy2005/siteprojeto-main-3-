@@ -8,7 +8,6 @@
     margin: 0;
     background-color: #f0f0f0;
     font-family: 'Arial', sans-serif;
-    background-image: url('imagem1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +19,6 @@
 /* Estilo do cartão */
 
 .cartao {
-    background: url('https://pa1.aminoapps.com/7049/d61fba59cfefa5258a08ce4f309c9a0389eefbfbr1-500-281_hq.gif') no-repeat center center / cover;
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -91,9 +89,9 @@
 
 .form-edicao input,
 .form-edicao select {
-    width: 100%;
+    width: 95%;
     padding: 12px;
-    margin: 8px 0;
+    margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
@@ -326,7 +324,7 @@
 /* Estilo do card */
 
 .cartao {
-    background: url('https://pa1.aminoapps.com/7049/d61fba59cfefa5258a08ce4f309c9a0389eefbfbr1-500-281_hq.gif') no-repeat center center / cover;
+    background: url('water\ perfil.jpg') no-repeat center center / cover;
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
