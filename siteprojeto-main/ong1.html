@@ -9,7 +9,7 @@
 <body>
     <!-- Botão Voltar -->
     <div class="back-button">
-        <button class="btn-back">Voltar</button>
+        <button class="btn-back" onclick="voltarPagina()">Voltar</button>
     </div>
 
     <!-- Container para o conteúdo -->
@@ -60,4 +60,9 @@
         </div>
     </div>
 </body>
+<script>
+    function voltarPagina() {
+        window.history.back(); // Faz o navegador voltar à página anterior
+    }
+</script>
 </html>
