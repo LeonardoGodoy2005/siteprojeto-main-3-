@@ -156,7 +156,24 @@ textarea.form-control {
     }
 }
 
+#farol {
+    width: 70%;
+    margin-left: 70px;
+  }
+
 #toca {
   width: 70%;
   margin-left: 70px;
 }
+
+
+
+#rua {
+    width: 70%;
+    margin-left: 70px;
+  }
+
+#ame {
+    width: 70%;
+    margin-left: 70px;
+  }
