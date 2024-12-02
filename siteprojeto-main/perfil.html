@@ -10,11 +10,10 @@
 
 <body>
     <div class="body">
-        <div class="cartao">
+        <div class="cartao" id="card" style="background-image: url('');">
             <!-- Imagem de fundo e conteúdo do cartão -->
             <div class="foto-container">
                 <img class="foto" src="https://via.placeholder.com/100" alt="Foto de Perfil" id="fotoPerfil" onclick="editarFoto()">
-                <div class="tooltip" id="tooltip">Clique para alterar a imagem de perfil</div>
             </div>
 
             <!-- Informações pessoais -->
@@ -39,11 +38,15 @@
             <!-- Botão para abrir o formulário de edição -->
             <button class="botao-editar" onclick="mostrarFormulario()">Editar Informações</button>
 
-            <!-- Botão de Logout -->
-            <button class="botao-editar" onclick="logout()">Logout</button>
-
             <!-- Campo de upload de foto -->
             <input type="file" id="uploadFoto" style="display:none" accept="image/*" onchange="atualizarFoto()">
+
+            <!-- Campo de upload de plano de fundo -->
+            <input type="file" id="uploadFundo" style="display:none" accept="image/*" onchange="atualizarFundo()">
+            <button class="botao-editar" onclick="document.getElementById('uploadFundo').click()">Alterar Plano de Fundo</button>
+
+            <!-- Botão de Logout (agora por último) -->
+            <button class="botao-editar" onclick="logout()">Logout</button>
         </div>
     </div>
 
