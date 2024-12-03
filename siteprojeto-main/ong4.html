@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Voluntário</title>
     <link rel="stylesheet" href="ong1.css">
+    <script src="enviowpp.js" defer></script>
 </head>
+
 <body>
     <!-- Botão Voltar -->
     <div class="back-button">
@@ -21,12 +24,13 @@
             <h4 class="text-primary">Se voluntarie na Ong da Rua</h4>
             <h5>Quem pode se inscrever no Ong da Rua</h5>
             <p>
-                Pessoas em situação de rua, que estão sem moradia fixa e enfrentam condições de extrema vulnerabilidade social.
-                População em risco social, que pode incluir, além das pessoas em situação de rua, indivíduos em risco de perder o acesso à moradia ou em outras situações de vulnerabilidade, como em casos de violência doméstica, dependência química, entre outros.
+                Pessoas em situação de rua, que estão sem moradia fixa e enfrentam condições de extrema vulnerabilidade social. População em risco social, que pode incluir, além das pessoas em situação de rua, indivíduos em risco de perder o acesso à moradia ou em outras
+                situações de vulnerabilidade, como em casos de violência doméstica, dependência química, entre outros.
             </p>
-            <h5>Ong na Rua</h5>
+            <h5 id="ong">Ong na Rua</h5>
             <p>
-                o projeto DaRua se tornou a Associação de Assistência e Desenvolvimento Humano DaRua, sem vínculos políticos ou religiosos, e com o propósito de atacar a invisibilidade social vivida pelas pessoas em situação de rua e em extrema vulnerabilidade social, através das ações de entrega de kits de higiene, água, cobertores, roupas, calçados, hambúrgueres e muito amor.
+                o projeto DaRua se tornou a Associação de Assistência e Desenvolvimento Humano DaRua, sem vínculos políticos ou religiosos, e com o propósito de atacar a invisibilidade social vivida pelas pessoas em situação de rua e em extrema vulnerabilidade social,
+                através das ações de entrega de kits de higiene, água, cobertores, roupas, calçados, hambúrgueres e muito amor.
             </p>
         </div>
 
@@ -55,7 +59,7 @@
                     <textarea id="endereco" name="endereco" class="form-control" rows="4" placeholder="Digite seu endereço completo" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" onclick="enviarWpp()" class="btn-primary">Enviar</button>
                 </div>
             </form>
         </div>
@@ -66,4 +70,5 @@
         window.history.back(); // Faz o navegador voltar à página anterior
     }
 </script>
+
 </html>

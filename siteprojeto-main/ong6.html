@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Voluntário</title>
     <link rel="stylesheet" href="ong1.css">
+
 </head>
+
 <body>
     <!-- Botão Voltar -->
     <div class="back-button">
@@ -21,15 +23,14 @@
             <h4 class="text-primary">Se voluntarie nos Amigos Da Floresta</h4>
             <h5>Quem pode se inscrever no Amigos da Floresta</h5>
             <p>
-                Comunidades locais e povos tradicionais em regiões de floresta, como ribeirinhos, indígenas e comunidades extrativistas, que dependem diretamente dos recursos naturais e das florestas para sua sobrevivência.
-
-                Jovens e adultos em situação de vulnerabilidade social, especialmente aqueles que vivem em áreas rurais ou em periferias que enfrentam desafios relacionados à educação, saúde e emprego. 
-                
-                Interessados em projetos de educação ambiental, desde que se alinhem aos objetivos da ONG de promover a preservação e o uso sustentável dos recursos naturais. Muitas vezes, a ONG oferece programas de capacitação e workshops voltados para a conscientização ambiental.
+                Comunidades locais e povos tradicionais em regiões de floresta, como ribeirinhos, indígenas e comunidades extrativistas, que dependem diretamente dos recursos naturais e das florestas para sua sobrevivência. Jovens e adultos em situação de vulnerabilidade
+                social, especialmente aqueles que vivem em áreas rurais ou em periferias que enfrentam desafios relacionados à educação, saúde e emprego. Interessados em projetos de educação ambiental, desde que se alinhem aos objetivos da ONG de promover
+                a preservação e o uso sustentável dos recursos naturais. Muitas vezes, a ONG oferece programas de capacitação e workshops voltados para a conscientização ambiental.
             </p>
-            <h5>Amigos da Floresta</h5>
+            <h5 id="ong">Amigos da Floresta</h5>
             <p>
-                Temos por objetivos incentivar, promover e apoiar a sustentabilidade, bem como promover a proteção, fiscalização, conservação, recuperação e manejo do meio ambiente, utilizando ferramentas de sensibilização e conhecimento, oficinas, campanhas, palestras e a atuação junto a Escolas e Comunidades em áreas situadas no entorno de  Unidades de Conservação. 
+                Temos por objetivos incentivar, promover e apoiar a sustentabilidade, bem como promover a proteção, fiscalização, conservação, recuperação e manejo do meio ambiente, utilizando ferramentas de sensibilização e conhecimento, oficinas, campanhas, palestras
+                e a atuação junto a Escolas e Comunidades em áreas situadas no entorno de Unidades de Conservação.
             </p>
         </div>
 
@@ -58,7 +59,7 @@
                     <textarea id="endereco" name="endereco" class="form-control" rows="4" placeholder="Digite seu endereço completo" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" onclick="enviarWpp()" class="btn-primary">Enviar</button>
                 </div>
             </form>
         </div>
@@ -69,4 +70,5 @@
         window.history.back(); // Faz o navegador voltar à página anterior
     }
 </script>
+
 </html>

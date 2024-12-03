@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Voluntário</title>
     <link rel="stylesheet" href="ong1.css">
+    <script src="enviowpp.js" defer></script>
 </head>
+
 <body>
     <!-- Botão Voltar -->
     <div class="back-button">
@@ -21,11 +24,13 @@
             <h4 class="text-primary">Se voluntarie na Farol na Quebrada</h4>
             <h5>Quem pode se inscrever no Farol</h5>
             <p>
-                As inscrições variam de acordo com cada edição ou ciclo do projeto. Em geral, o processo envolve o preenchimento de formulários online, onde os interessados precisam apresentar informações sobre sua trajetória e suas motivações para participar. Alguns requisitos podem incluir a comprovação de residência em uma comunidade periférica, além de outros critérios específicos relacionados ao tipo de curso ou programa que está sendo oferecido.
+                As inscrições variam de acordo com cada edição ou ciclo do projeto. Em geral, o processo envolve o preenchimento de formulários online, onde os interessados precisam apresentar informações sobre sua trajetória e suas motivações para participar. Alguns
+                requisitos podem incluir a comprovação de residência em uma comunidade periférica, além de outros critérios específicos relacionados ao tipo de curso ou programa que está sendo oferecido.
             </p>
-            <h5>Farol na Quebrada</h5>
+            <h5 id="ong">Farol na Quebrada</h5>
             <p>
-                O Farol na Quebrada oferece cursos, mentorias, workshops e treinamentos em áreas como tecnologia, empreendedorismo e comunicação. Em geral, os participantes têm acesso a conteúdos que os preparam para o mercado de trabalho ou para criar seus próprios negócios, além de aprenderem habilidades técnicas e socioemocionais.
+                O Farol na Quebrada oferece cursos, mentorias, workshops e treinamentos em áreas como tecnologia, empreendedorismo e comunicação. Em geral, os participantes têm acesso a conteúdos que os preparam para o mercado de trabalho ou para criar seus próprios
+                negócios, além de aprenderem habilidades técnicas e socioemocionais.
             </p>
         </div>
 
@@ -54,7 +59,7 @@
                     <textarea id="endereco" name="endereco" class="form-control" rows="4" placeholder="Digite seu endereço completo" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" onclick="enviarWpp()" class="btn-primary">Enviar</button>
                 </div>
             </form>
         </div>
@@ -65,4 +70,5 @@
         window.history.back(); // Faz o navegador voltar à página anterior
     }
 </script>
+
 </html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Voluntário</title>
     <link rel="stylesheet" href="ong1.css">
+    <script src="enviowpp.js" defer></script>
 </head>
+
 <body>
     <!-- Botão Voltar -->
     <div class="back-button">
@@ -21,11 +24,13 @@
             <h4 class="text-primary">Se voluntarie na Toca Segura</h4>
             <h5>Quem pode se inscrever na Toca Segura</h5>
             <p>
-                Não temos condições de sair pelas ruas do DF resgatando todos os animais. Gostaríamos que todos entendessem que espaço e recursos (financeiros e humanos) são escassos. Para que um número maior de animais possa ser ajudado, é preciso que todos façam sua parte. Gostamos sempre de destacar que TODOS podem ser protetores, se cada um ajudar um animal em situação de rua, será um animal a menos sofrendo.
+                Não temos condições de sair pelas ruas do DF resgatando todos os animais. Gostaríamos que todos entendessem que espaço e recursos (financeiros e humanos) são escassos. Para que um número maior de animais possa ser ajudado, é preciso que todos façam sua
+                parte. Gostamos sempre de destacar que TODOS podem ser protetores, se cada um ajudar um animal em situação de rua, será um animal a menos sofrendo.
             </p>
-            <h5>Toca Segura</h5>
+            <h5 id="ong">Toca Segura</h5>
             <p>
-                Nosso objetivo é retirar animais das ruas e de locais onde estejam correndo riscos, acolhendo-os, castrando-os e tratando de sua saúde, preparando-os dessa forma para que sejam adotados, conseguindo um lar de amor para cada um de nossos protegidos. Como o número de animais é incalculável e nosso espaço encontra-se superlotado, também ajudamos protetores independentes em suas lutas, divulgando seus protegidos e apoiando-os para que consigam lares definitivos para os animais que resgatam.
+                Nosso objetivo é retirar animais das ruas e de locais onde estejam correndo riscos, acolhendo-os, castrando-os e tratando de sua saúde, preparando-os dessa forma para que sejam adotados, conseguindo um lar de amor para cada um de nossos protegidos. Como
+                o número de animais é incalculável e nosso espaço encontra-se superlotado, também ajudamos protetores independentes em suas lutas, divulgando seus protegidos e apoiando-os para que consigam lares definitivos para os animais que resgatam.
             </p>
         </div>
 
@@ -54,7 +59,7 @@
                     <textarea id="endereco" name="endereco" class="form-control" rows="4" placeholder="Digite seu endereço completo" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" onclick="enviarWpp()" class="btn-primary">Enviar</button>
                 </div>
             </form>
         </div>
@@ -65,4 +70,5 @@
         window.history.back(); // Faz o navegador voltar à página anterior
     }
 </script>
+
 </html>

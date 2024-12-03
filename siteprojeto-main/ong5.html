@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Voluntário</title>
     <link rel="stylesheet" href="ong1.css">
+    <script src="enviowpp.js" defer></script>
 </head>
+
 <body>
     <!-- Botão Voltar -->
     <div class="back-button">
@@ -21,11 +24,13 @@
             <h4 class="text-primary">Se voluntarie na AME</h4>
             <h5>Quem pode se inscrever no AME</h5>
             <p>
-                As iniciativas da AME são geralmente voltadas para mulheres em situação de vulnerabilidade social, com foco em áreas como educação, violência, saúde, e empoderamento político e econômico. Mulheres que se enquadram em grupos marginalizados, como as de comunidades periféricas, mulheres negras, indígenas, e LGBTQIA+, podem ser priorizadas nas inscrições para os programas oferecidos pela ONG.
+                As iniciativas da AME são geralmente voltadas para mulheres em situação de vulnerabilidade social, com foco em áreas como educação, violência, saúde, e empoderamento político e econômico. Mulheres que se enquadram em grupos marginalizados, como as de
+                comunidades periféricas, mulheres negras, indígenas, e LGBTQIA+, podem ser priorizadas nas inscrições para os programas oferecidos pela ONG.
             </p>
-            <h5>AME</h5>
+            <h5 id="ong">AME</h5>
             <p>
-                A AME organiza uma série de ações e projetos voltados para o apoio direto às mulheres, com foco no empoderamento feminino, educação, saúde, e combate à violência. A ONG frequentemente realiza workshops, capacitações e ações comunitárias que visam promover a igualdade de gênero e reduzir as disparidades de oportunidades entre homens e mulheres.
+                A AME organiza uma série de ações e projetos voltados para o apoio direto às mulheres, com foco no empoderamento feminino, educação, saúde, e combate à violência. A ONG frequentemente realiza workshops, capacitações e ações comunitárias que visam promover
+                a igualdade de gênero e reduzir as disparidades de oportunidades entre homens e mulheres.
             </p>
         </div>
 
@@ -54,7 +59,7 @@
                     <textarea id="endereco" name="endereco" class="form-control" rows="4" placeholder="Digite seu endereço completo" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" onclick="enviarWpp()" class="btn-primary">Enviar</button>
                 </div>
             </form>
         </div>
@@ -65,4 +70,5 @@
         window.history.back(); // Faz o navegador voltar à página anterior
     }
 </script>
+
 </html>
