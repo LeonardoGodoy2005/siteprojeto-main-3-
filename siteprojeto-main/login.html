@@ -28,7 +28,7 @@
                 <label for="loginEmail" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="loginEmail" required placeholder="Digite seu e-mail" aria-label="E-mail">
             </div>
-    
+
             <!-- Campo de Senha -->
             <div class="mb-3">
                 <label for="loginPassword" class="form-label">Senha</label>
@@ -40,7 +40,103 @@
         </form>
     </div>
 
-    <script src="login.js"></script>
+    <div id="message" class="message"></div>
+
+    <div id="loading" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+
+    <script>
+        async function enviarLogin(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('loginEmail').value;
+            const senha = document.getElementById('loginPassword').value;
+
+            // Limpa a mensagem anterior
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = ''; // Limpa a mensagem anterior
+            messageElement.classList.remove('success', 'error'); // Remove as classes de estilo de erro ou sucesso
+
+            // Exibe o spinner de carregamento
+            const loadingElement = document.getElementById('loading');
+            loadingElement.style.display = 'block'; // Mostra o spinner
+
+            // Validação básica de campos
+            if (!email || !senha) {
+                messageElement.textContent = "Por favor, preencha todos os campos.";
+                messageElement.classList.add('error');
+                loadingElement.style.display = 'none'; // Esconde o spinner
+                return;
+            }
+
+            // Validação de email
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(email)) {
+                messageElement.textContent = "Por favor, insira um e-mail válido.";
+                messageElement.classList.add('error');
+                loadingElement.style.display = 'none'; // Esconde o spinner
+                return;
+            }
+
+            // Dados a serem enviados para a API
+            const dadosParaEnviar = {
+                email,
+                senha
+            };
+
+            try {
+                console.log("Enviando dados para a API...", dadosParaEnviar);
+
+                const response = await fetch('http://localhost:3000/auth', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dadosParaEnviar) // Envia o e-mail e a senha para a API
+                });
+
+                // Converte a resposta para JSON
+                const data = await response.json();
+
+                // Verifica se a resposta foi ok
+                if (response.ok) {
+                    // Verifica se a mensagem de sucesso está presente na resposta
+                    if (data.message === 'Login bem-sucedido!') {
+                        messageElement.textContent = "Login realizado com sucesso!";
+                        messageElement.classList.add('success');
+
+                        // Armazena as informações do usuário no localStorage
+                        localStorage.setItem('usuario', JSON.stringify(data.usuario));
+
+                        // Redireciona para a página principal após o login
+                        setTimeout(() => {
+                            window.location.href = 'home.html'; // Ou a página desejada após o login
+                        }, 2000); // Redireciona após 2 segundos
+                    }
+                } else {
+                    // Se a resposta não for ok, exibe a mensagem de erro
+                    messageElement.textContent = data.message || "Erro desconhecido. Tente novamente.";
+                    messageElement.classList.add('error');
+                }
+
+            } catch (error) {
+                console.error('Erro no login:', error); // Exibe o erro no console
+                messageElement.textContent = "Ocorreu um erro ao tentar realizar o login. Tente novamente mais tarde.";
+                messageElement.classList.add('error');
+            } finally {
+                // Esconde o spinner após a requisição
+                setTimeout(() => {
+                    loadingElement.style.display = 'none';
+                }, 3000); // O spinner ficará visível por 3 segundos após a conclusão
+            }
+        }
+
+        // Associa a função de envio ao formulário de login
+        document.getElementById('loginForm').addEventListener('submit', enviarLogin);
+    </script>
+
 
 </body>
 
