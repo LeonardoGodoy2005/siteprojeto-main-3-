@@ -157,14 +157,14 @@ textarea.form-control {
 }
 
 #farol {
-    width: 70%;
-    height: 150px;
+    width: 60%;
+    height: 172px;
     margin-left: 80px;
   }
 
 #toca {
-  width: 75%;
-  height: 150px;
+  width: 60%;
+  height: 120px;
   margin-left: 80px;
 }
 
@@ -175,18 +175,18 @@ textarea.form-control {
   }
 
 #ame {
-    width: 70%;
-    height: 150px;
+    width: 60%;
+    height: 130px;
     margin-left: 80px;
   }
 #cure {
     width: 70%;
-    height: 150px;
+    height: 165px;
     margin-left: 80px;
 }
 
 #amigos {
-    width: 70%;
+    width: 60%;
     height: 150px;
     margin-left: 80px;
 }
