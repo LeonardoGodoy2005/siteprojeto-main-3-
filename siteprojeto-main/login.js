@@ -11,7 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Verifica se o e-mail e a senha coincidem com os dados armazenados
     if (email === storedEmail && password === storedPassword) {
         alert('Login realizado com sucesso!');
-        window.location.href = 'home.html'; // Redireciona para a página home
+        window.location.href = 'ongs.html'; // Redireciona para a página home
     } else {
         alert('E-mail ou senha incorretos. Tente novamente.');
     }
