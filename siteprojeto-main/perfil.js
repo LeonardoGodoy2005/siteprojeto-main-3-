@@ -33,12 +33,18 @@ function atualizarFoto() {
     }
 }
 
+function logout() {
+    // Aqui você pode realizar o logout (se necessário)
+
+    // Redireciona para a página 'home'
+    window.location.href = 'home.html'; // Ou o caminho da sua página inicial
+}
 // Função para logout
 function logout() {
     // Aqui você pode adicionar o código para deslogar o usuário
     alert("Você foi deslogado!");
     // Redirecionar ou limpar informações de login
-    window.location.href = "login.html"; // Ou qualquer página de login
+    window.location.href = "inicio.html"; // Ou qualquer página de login
 }
 
 // Função para enviar feedback para o WhatsApp
@@ -53,11 +59,12 @@ function enviarWhatsApp() {
         alert("Por favor, escreva uma mensagem antes de enviar.");
     }
 }
+
 function atualizarFundo() {
     const file = document.getElementById('uploadFundo').files[0];
     const reader = new FileReader();
 
-    reader.onload = function (e) {
+    reader.onload = function(e) {
         document.getElementById('card').style.backgroundImage = `url(${e.target.result})`;
     }
 
@@ -74,7 +81,7 @@ function atualizarFoto() {
     const file = document.getElementById('uploadFoto').files[0];
     const reader = new FileReader();
 
-    reader.onload = function (e) {
+    reader.onload = function(e) {
         document.getElementById('fotoPerfil').src = e.target.result;
     }
 
@@ -102,7 +109,10 @@ function salvarEdicao() {
 }
 
 function logout() {
-    alert("Logout efetuado!");
+    // Aqui você pode realizar o logout (se necessário)
+
+    // Redireciona para a página 'home'
+    window.location.href = 'inicio.html'; // Ou o caminho da sua página inicial
 }
 
 function enviarWhatsApp() {
